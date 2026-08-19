@@ -1,0 +1,891 @@
+{
+  "info": {
+    "_postman_id": "7814d81d-8693-4234-89f4-a8112a04a7a8",
+    "name": "VSCU - Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29762196"
+  },
+  "item": [
+    {
+      "name": "VSCU- Basic Data Management",
+      "item": [
+        {
+          "name": "Get code list ",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfId",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"lastReqDt\": \"20230328000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/code/selectCodes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "code",
+                "selectCodes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get item classification list ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\",\r\n    \"lastReqDt\":\"20180523000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/itemClass/selectItemsClass",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "itemClass",
+                "selectItemsClass"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all PIN list",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"custmTin\": \"A987654321Z\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/customers/selectCustomer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "customers",
+                "selectCustomer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get branch list  ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"lastReqDt\":\"20180520000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/branches/selectBranches",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "branches",
+                "selectBranches"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get notice list ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"lastReqDt\":\"20180520000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/notices/selectNotices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "notices",
+                "selectNotices"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Branch information management",
+      "item": [
+        {
+          "name": "Send customer information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"custNo\":\"999991113\",\r\n    \"custTin\":\"A123456789Z\",\r\n    \"custNm\":\"MTEJA LIMITED\", \r\n    \"adrs\":null,\r\n    \"telNo\":null,\r\n    \"email\":null,\r\n    \"faxNo\":null,\r\n    \"useYn\":\"Y\", \r\n    \"remark\":null,\r\n    \"regrNm\":\"Admin\", \r\n    \"regrId\":\"Admin\",\r\n    \"modrNm\":\"Admin\",\r\n    \"modrId\":\"Admin\"\r\n    } ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/branches/saveBrancheCustomers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "branches",
+                "saveBrancheCustomers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send branch user account",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"userId\":\"operator2\",\r\n    \"userNm\":\"operator2\",\r\n    \"pwd\":\"12341234\",\r\n    \"adrs\":null,\r\n    \"cntc\":null,\r\n    \"authCd\":null,\r\n    \"remark\":null,\r\n    \"useYn\":\"Y\",\r\n    \"regrNm\":\"Admin\",\r\n    \"regrId\":\"Admin\",\r\n    \"modrNm\":\"Admin\",\r\n    \"modrId\":\"Admin\"\r\n    }  ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/branches/saveBrancheUsers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "branches",
+                "saveBrancheUsers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send branch insurance information ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"isrccCd\":\"ISRCC01\",\r\n    \"isrccNm\":\"RSSB Insurance\",\r\n    \"isrcRt\":20,\r\n    \"useYn\":\"Y\",\r\n    \"regrNm\":\"Admin\",\r\n    \"regrId\":\"Admin\",\r\n    \"modrNm\":\"Admin\",\r\n    \"modrId\":\"Admin\"\r\n    }  ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/branches/saveBrancheInsurances",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "branches",
+                "saveBrancheInsurances"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Imports Item Management",
+      "item": [
+        {
+          "name": "Get imported item information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"lastReqDt\": \"20190524000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/imports/selectImportItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "imports",
+                "selectImportItems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send (converted) imported item information ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"taskCd\": \"2231943\",\r\n    \"dclDe\": \"20191217\",\r\n    \"itemSeq\": 1,\r\n    \"hsCd\": \"1231531231\",\r\n    \"itemClsCd\": \"5022110801\",\r\n    \"itemCd\": \"KE1NTXU0000001\",\r\n    \"imptItemSttsCd\": \"1\",\r\n    \"remark\": \"remark\",\r\n    \"modrNm\": \"Admin\",\r\n    \"modrId\": \"Admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/imports/updateImportItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "imports",
+                "updateImportItems"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Initialization",
+      "item": [
+        {
+          "name": "Initialization Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"dvcSrlNo\": \"{{dvcSrlNo}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/initializer/selectInitInfo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "initializer",
+                "selectInitInfo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Item Management",
+      "item": [
+        {
+          "name": "Send Item information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\", \r\n    \"itemCd\":\"KE1NTXU0000009\",\r\n    \"itemClsCd\":\"5059690809\",\r\n    \"itemTyCd\":\"1\",\r\n    \"itemNm\":\"test materialitem 5\", \r\n    \"itemStdNm\":null,\r\n    \"orgnNatCd\":\"KE\",\r\n    \"pkgUnitCd\":\"NT\", \r\n    \"qtyUnitCd\":\"U\",\r\n    \"taxTyCd\":\"B\",\r\n    \"btchNo\":null,\r\n    \"bcd\":null,\r\n    \"dftPrc\":3500,\r\n    \"grpPrcL1\":3500,\r\n    \"grpPrcL2\":3500,\r\n    \"grpPrcL3\":3500,\r\n    \"grpPrcL4\":3500,\r\n    \"grpPrcL5\":null,\r\n    \"addInfo\":null,\r\n    \"sftyQty\":null,\r\n    \"isrcAplcbYn\":\"N\",\r\n    \"useYn\":\"Y\",\r\n    \"regrNm\":\"Admin\",\r\n    \"regrId\":\"Admin\",\r\n    \"modrNm\":\"Admin\",\r\n    \"modrId\":\"Admin\"\r\n    } ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/items/saveItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "items",
+                "saveItems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Item information",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"lastReqDt\": \"20260711164447\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/items/selectItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "items",
+                "selectItems"
+              ],
+              "query": [
+                {
+                  "key": "cmckey",
+                  "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Item Composition",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"itemCd\": \"KE1NTXU0000009\",\r\n    \"cpstItemCd\": \"ITM001\",\r\n    \"cpstQty\": 10,\r\n    \"regrId\": \"Admin\",\r\n    \"regrNm\": \"Admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/items/saveItemComposition",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "items",
+                "saveItemComposition"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Purchase management",
+      "item": [
+        {
+          "name": "Get purchase transaction information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"lastReqDt\": \"20260717152342\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/trnsPurchase/selectTrnsPurchaseSales",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "trnsPurchase",
+                "selectTrnsPurchaseSales"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send purchase transaction information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\",\r\n    \"invcNo\":3,\r\n    \"orgInvcNo\":0,\r\n    \"spplrTin\":null,\r\n    \"spplrBhfId\":null,\r\n    \"spplrNm\":null,\r\n    \"spplrInvcNo\":null,\r\n    \"regTyCd\":\"M\",\r\n    \"pchsTyCd\":\"N\",\r\n    \"rcptTyCd\":\"P\",\r\n    \"pmtTyCd\":\"01\",\r\n    \"pchsSttsCd\":\"02\",\r\n    \"cfmDt\":\"20200127210300\",\r\n    \"pchsDt\":\"20200127\",\r\n    \"wrhsDt\":\"\",\r\n    \"cnclReqDt\":\"\",\r\n    \"cnclDt\":\"\",\r\n    \"rfdDt\":\"\",\r\n    \"totItemCnt\":2 ,\r\n    \"taxblAmtA\":0,\r\n    \"taxblAmtB\":250000,\r\n    \"taxblAmtC\":0,\r\n    \"taxblAmtD\":0,\r\n    \"taxblAmtE\":0,\r\n    \"taxRtA\":0,\r\n    \"taxRtB\":18,\r\n    \"taxRtC\":0,\r\n    \"taxRtD\":0,\r\n    \"taxRtE\":0,\r\n    \"taxAmtA\":0,\r\n    \"taxAmtB\":94576,\r\n    \"taxAmtC\":0,\r\n    \"taxAmtD\":0,\r\n    \"taxAmtE\":0,\r\n    \"totTaxblAmt\":10500,\r\n    \"totTaxAmt\":1890,\r\n    \"totAmt\":10500,\r\n    \"remark\":null,\r\n    \"regrNm\":\"Admin\",\r\n    \"regrId\":\"Admin\",\r\n    \"modrNm\":\"Admin\",\r\n    \"modrId\":\"Admin\",\r\n    \"itemList\":[{\"itemSeq\":1,\"itemCd\":\"KE1NTXU0000001\",\"itemClsCd\":\"5059690800\",\"itemNm\":\"test item 1\",\"bcd\":\"\",\"spplrItemClsCd\":null,\"spplrItemCd\":null,\"spplrItemNm\":null, \"pkgUnitCd\":\"NT\", \"pkg\":2,\"qtyUnitCd\":\"U\", \"qty\":2,\"prc\":3500,\"splyAmt\":7000,\"dcRt\":0,\"dcAmt\":0, \"taxblAmt\":7000,\"taxTyCd\":\"B\", \"taxAmt\":1260,\"totAmt\":7000,\"itemExprDt\":null}, {\"itemSeq\":2, \"itemCd\":\"KE1NTXU0000002\", \"itemClsCd\":\"5022110801\",\"itemNm\":\"test item 2\",\"bcd\":\"\",\"spplrItemClsCd\":null,\"spplrItemCd\":null,\"spplrItemNm\":null,\"pkgUnitCd\":\"NT\", \"pkg\":1,\"qtyUnitCd\":\"U\", \"qty\":1,\"prc\":3500, \"splyAmt\":3500, \"dcRt\":0,\"dcAmt\":0,\"taxblAmt\":3500, \"taxTyCd\":\"B\",\"taxAmt\":6.30,\"totAmt\":3500,\"itemExprDt\":null}]} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/trnsPurchase/savePurchases",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "trnsPurchase",
+                "savePurchases"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Sales Management",
+      "item": [
+        {
+          "name": "Send sales transaction information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P052005903P",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              },
+              {
+                "key": "cmckey",
+                "value": "D3B478EDFBE54536B8DC9DA691A51440E6278C18104D4D6D904F",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"invcNo\": 4,\r\n    \"orgInvcNo\": 4,\r\n    \"custTin\": \"\",\r\n    \"custNm\": \"\",\r\n    \"salesTyCd\": \"N\",\r\n    \"rcptTyCd\": \"S\",\r\n    \"pmtTyCd\": \"01\",\r\n    \"salesSttsCd\": \"02\",\r\n    \"cfmDt\": \"20250409105344\",\r\n    \"salesDt\": \"20250409\",\r\n    \"stockRlsDt\": \"20250409105344\",\r\n    \"cnclReqDt\": null,\r\n    \"cnclDt\": null,\r\n    \"rfdDt\": null,\r\n    \"rfdRsnCd\": null,\r\n    \"totItemCnt\": 1,\r\n    \"taxblAmtA\": 0,\r\n    \"taxblAmtB\": 690,\r\n    \"taxblAmtC\": 0,\r\n    \"taxblAmtD\": 0,\r\n    \"taxblAmtE\": 0,\r\n    \"taxRtA\": 0,\r\n    \"taxRtB\": 16,\r\n    \"taxRtC\": 0,\r\n    \"taxRtD\": 0,\r\n    \"taxRtE\": 0,\r\n    \"taxAmtA\": 0,\r\n    \"taxAmtB\": 690,\r\n    \"taxAmtC\": 0,\r\n    \"taxAmtD\": 0,\r\n    \"taxAmtE\": 0,\r\n    \"totTaxblAmt\": 5000,\r\n    \"totTaxAmt\": 690,\r\n    \"totAmt\": 5000,\r\n    \"prchrAcptcYn\": \"N\",\r\n    \"remark\": null,\r\n    \"regrId\": \"11999\",\r\n    \"regrNm\": \"TestVSCU\",\r\n    \"modrId\": \"45678\",\r\n    \"modrNm\": \"TestVSCU\",\r\n    \"receipt\": {\r\n        \"custTin\": \"100110263\",\r\n        \"custMblNo\": null,\r\n        \"rptNo\": 1,\r\n        \"trdeNm\": \"\",\r\n        \"adrs\": \"\",\r\n        \"topMsg\": \"Park With Us\",\r\n        \"btmMsg\": \"Thank You\",\r\n        \"prchrAcptcYn\": \"N\"\r\n    },\r\n    \"itemList\": [\r\n        {\r\n            \"itemSeq\": 1,\r\n            \"itemCd\": \"KE1NTXU0000001\",\r\n            \"itemClsCd\": \"5059690800\",\r\n            \"itemNm\": \"Parking Fee\",\r\n            \"bcd\": null,\r\n            \"pkgUnitCd\": \"NT\",\r\n            \"pkg\": 1,\r\n            \"qtyUnitCd\": \"U\",\r\n            \"qty\": 1,\r\n            \"prc\": 5000,\r\n            \"splyAmt\": 5000,\r\n            \"dcRt\": 0,\r\n            \"dcAmt\": 0,\r\n            \"isr ccCd\": null,\r\n            \"isrccNm\": null,\r\n            \"isrcRt\": null,\r\n            \"isrcAmt\": null,\r\n            \"taxTyCd\": \"B\",\r\n            \"taxblAmt\": 5000,\r\n            \"taxAmt\": 690,\r\n            \"totAmt\": 5000\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/trnsSales/saveSales",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "trnsSales",
+                "saveSales"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VSCU-Stock Information Management",
+      "item": [
+        {
+          "name": "Move Stock Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\":\"{{tin}}\",\r\n    \"bhfId\":\"{{bhfid}}\",\r\n    \"lastReqDt\":\"20180524000000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/stock/selectStockItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "stock",
+                "selectStockItems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Stock Information (I/O)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"sarNo\": 2,\r\n    \"orgSarNo\": 0,\r\n    \"regTyCd\": \"M\",\r\n    \"custTin\": null,\r\n    \"custNm\": null,\r\n    \"custBhfId\": null,\r\n    \"sarTyCd\": \"2\",\r\n    \"ocrnDt\": \"20200126\",\r\n    \"totItemCnt\": 2,\r\n    \"totTaxblAmt\": 70000,\r\n    \"totTaxAmt\": 12000,\r\n    \"totAmt\": 70000,\r\n    \"remark\": null,\r\n    \"regrId\": \"Admin\",\r\n    \"regrNm\": \"Admin\",\r\n    \"modrNm\": \"Admin\",\r\n    \"modrId\": \"Admin\",\r\n    \"itemList\": [\r\n        {\r\n            \"itemSeq\": 1,            \"itemCd\": \"KE1NTXU0000001\",            \"itemClsCd\": \"5059690800\",\r\n            \"itemNm\": \"testitem1\",            \"bcd\": null,            \"pkgUnitCd\": \"NI\",\r\n            \"pkg\": 10,            \"qtyUnitCd\": \"U\",            \"qty\": 10,\r\n            \"itemExprDt\": null,            \"prc\": 3500,            \"splyAmt\": 35000,\r\n            \"totDcAmt\": 0,            \"taxblAmt\": 35000,            \"taxTyCd\": \"B\",\r\n            \"taxAmt\": 6000,            \"totAmt\": 35000\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/stock/saveStockItems",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "stock",
+                "saveStockItems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Stock Master Save Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "tin",
+                "value": "P000607989R",
+                "type": "text"
+              },
+              {
+                "key": "bhfid",
+                "value": "00",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tin\": \"{{tin}}\",\r\n    \"bhfId\": \"{{bhfid}}\",\r\n    \"itemCd\": \"KE1NTXU0000001\",\r\n    \"rsdQty\": 3,\r\n    \"regrId\": \"Admin\",\r\n    \"regrNm\": \"Admin\",\r\n    \"modrNm\": \"Admin\",\r\n    \"modrId\": \"Admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/stockMaster/saveStockMaster",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "stockMaster",
+                "saveStockMaster"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
